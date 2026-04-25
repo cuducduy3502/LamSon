@@ -1,0 +1,1815 @@
+
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FINAL Pitch Strategy — Nội Thất Lam Sơn</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --ink: #0d2618;
+    --ink-2: #173a27;
+    --forest: #214d34;
+    --sage: #4a6741;
+    --sage-2: #6f8a69;
+    --mint: #e8f1ec;
+    --cream: #f4f7f4;
+    --paper: #ffffff;
+    --wood: #a67c52;
+    --wood-2: #c49a6c;
+    --rust: #9b3a1e;
+    --danger: #8f2e1f;
+    --muted: #738276;
+    --line: #ceded4;
+    --line-2: #dce8df;
+    --highlight: #f0f5f2;
+    --shadow: 0 18px 50px rgba(13, 38, 24, 0.08);
+    --shadow-soft: 0 8px 26px rgba(13, 38, 24, 0.06);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background:
+      radial-gradient(circle at top right, rgba(166,124,82,0.10), transparent 320px),
+      linear-gradient(180deg, #f7faf7 0%, var(--cream) 45%, #eef5f0 100%);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    line-height: 1.75;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+  b, strong { font-weight: 800; color: var(--ink); }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+
+  /* HERO */
+  .masthead {
+    background:
+      linear-gradient(135deg, rgba(13,38,24,0.98), rgba(23,58,39,0.96)),
+      radial-gradient(circle at 80% 10%, rgba(166,124,82,0.20), transparent 340px);
+    color: var(--cream);
+    padding: 72px 64px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .masthead::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    border: 1px solid rgba(166,124,82,0.28);
+    background: rgba(166,124,82,0.05);
+  }
+
+  .masthead::after {
+    content: 'LAM SƠN';
+    position: absolute;
+    bottom: -34px;
+    right: 42px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(70px, 11vw, 150px);
+    font-weight: 900;
+    color: white;
+    opacity: 0.035;
+    letter-spacing: -5px;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .masthead-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(166,124,82,0.75);
+    color: var(--wood-2);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 6px 12px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 900;
+    line-height: 0.98;
+    max-width: 920px;
+    margin-bottom: 20px;
+    letter-spacing: -1.4px;
+  }
+
+  .masthead h1 span { color: var(--wood-2); }
+
+  .subtitle {
+    max-width: 720px;
+    color: rgba(244,247,244,0.78);
+    font-size: clamp(14px, 1.7vw, 18px);
+    line-height: 1.7;
+  }
+
+  .hero-thesis {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 18px;
+  }
+
+  .thesis-card {
+    border: 1px solid rgba(206,222,212,0.16);
+    background: rgba(255,255,255,0.055);
+    padding: 22px 24px;
+    backdrop-filter: blur(12px);
+  }
+
+  .thesis-label {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--wood-2);
+    font-size: 10px;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .thesis-big {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 3vw, 34px);
+    line-height: 1.18;
+    font-weight: 900;
+  }
+
+  .thesis-copy {
+    font-size: 13px;
+    color: rgba(244,247,244,0.76);
+    margin-top: 8px;
+  }
+
+  .meta-bar {
+    margin-top: 34px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    display: grid;
+    grid-template-columns: repeat(5, minmax(120px, 1fr));
+    gap: 22px;
+  }
+
+  .meta-item { min-width: 0; }
+  .meta-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: rgba(196,154,108,0.86);
+    margin-bottom: 5px;
+  }
+  .meta-val {
+    color: rgba(244,247,244,0.94);
+    font-size: 12px;
+    line-height: 1.45;
+    font-weight: 600;
+  }
+
+  /* NAV */
+  .toc-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(13,38,24,0.96);
+    border-bottom: 3px solid var(--wood);
+    box-shadow: 0 10px 30px rgba(13,38,24,0.16);
+  }
+
+  .toc {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .toc::-webkit-scrollbar { display: none; }
+  .toc a {
+    display: block;
+    color: rgba(244,247,244,0.62);
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 17px 18px;
+    white-space: nowrap;
+    transition: color 0.18s, background 0.18s;
+  }
+  .toc a:hover {
+    color: var(--wood-2);
+    background: rgba(255,255,255,0.04);
+  }
+
+  /* LAYOUT */
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+
+  .section {
+    padding: 72px 0 54px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .section:last-child { border-bottom: none; }
+
+  .section-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 22px;
+    align-items: start;
+    margin-bottom: 36px;
+  }
+
+  .section-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(54px, 9vw, 86px);
+    font-weight: 900;
+    color: rgba(74,103,65,0.22);
+    line-height: 0.9;
+  }
+
+  .section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 43px);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+    margin-bottom: 10px;
+  }
+
+  .section-title p {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  .lead {
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--forest);
+    max-width: 900px;
+    margin-bottom: 28px;
+  }
+
+  .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+
+  .card {
+    background: rgba(255,255,255,0.92);
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--wood);
+    padding: 24px;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+  }
+
+  .card.sage { border-top-color: var(--sage); }
+  .card.ink { border-top-color: var(--ink); }
+  .card.rust { border-top-color: var(--rust); }
+  .card.flat { border-top-width: 1px; }
+
+  .card-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .card-val {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 9px;
+    letter-spacing: -0.8px;
+  }
+
+  .card-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .callout {
+    background: linear-gradient(135deg, var(--mint), #ffffff);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--wood);
+    padding: 22px 24px;
+    margin: 28px 0;
+    box-shadow: var(--shadow-soft);
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .callout.green { border-left-color: var(--sage); }
+  .callout.danger { border-left-color: var(--danger); }
+
+  .callout-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    color: var(--wood);
+    margin-bottom: 8px;
+    font-weight: 800;
+  }
+
+  .big-insight {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 30px 32px;
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .big-insight::after {
+    content: '';
+    position: absolute;
+    right: -70px;
+    top: -70px;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background: rgba(166,124,82,0.14);
+  }
+
+  .big-insight small {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--wood-2);
+    font-size: 10px;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .big-insight h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 46px);
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: -1px;
+    max-width: 840px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .big-insight p {
+    margin-top: 12px;
+    max-width: 820px;
+    color: rgba(244,247,244,0.74);
+    position: relative;
+    z-index: 2;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .pill.bad { background: #fee2e2; color: #991b1b; }
+  .pill.ok { background: #d1fae5; color: #065f46; }
+  .pill.warn { background: #fff3cd; color: #7d6008; }
+  .pill.info { background: #dbeafe; color: #1e40af; }
+  .pill.green { background: var(--mint); color: var(--forest); border: 1px solid var(--line); }
+
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--line);
+    background: white;
+    box-shadow: var(--shadow-soft);
+    margin: 20px 0 28px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+    background: white;
+  }
+
+  th {
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    padding: 14px 16px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  td {
+    padding: 15px 16px;
+    border-bottom: 1px solid var(--line-2);
+    font-size: 12px;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td { background: var(--highlight); }
+  tr:last-child td { border-bottom: none; }
+
+  .showroom-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .showroom-item {
+    display: grid;
+    grid-template-columns: 52px 1fr auto;
+    gap: 16px;
+    align-items: center;
+    background: white;
+    border: 1px solid var(--line);
+    padding: 18px 20px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .sr-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--wood);
+  }
+
+  .sr-name {
+    font-weight: 800;
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  .sr-addr {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .sr-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 8px;
+    border: 1px solid var(--sage);
+    color: var(--sage);
+    white-space: nowrap;
+    background: var(--mint);
+  }
+
+  .bar-chart { display: grid; gap: 13px; }
+  .bar-row {
+    display: grid;
+    grid-template-columns: 150px 1fr 64px;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .bar-label {
+    font-size: 12px;
+    color: var(--forest);
+    text-align: right;
+    font-weight: 700;
+  }
+
+  .bar-track {
+    height: 22px;
+    background: var(--mint);
+    border: 1px solid var(--line);
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--sage), var(--wood));
+  }
+
+  .bar-val {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .split-box {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    border: 1px solid var(--line);
+    background: white;
+    box-shadow: var(--shadow-soft);
+    margin: 22px 0;
+  }
+
+  .split-left {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 28px;
+  }
+
+  .split-left h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .split-left p { color: rgba(244,247,244,0.72); }
+
+  .split-right {
+    padding: 28px;
+    display: grid;
+    gap: 14px;
+  }
+
+  .mini-point {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+
+  .mini-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--mint);
+    color: var(--sage);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .mini-point h4 {
+    font-size: 14px;
+    line-height: 1.25;
+    margin-bottom: 2px;
+  }
+
+  .mini-point p {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .segment {
+    background: white;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-soft);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .segment h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .segment .tagline {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--wood);
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .segment ul, .s-list, .bullet-list {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+
+  .segment li, .s-list li, .bullet-list li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 12px;
+    color: var(--forest);
+    line-height: 1.7;
+  }
+
+  .segment li::before, .s-list li::before, .bullet-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--wood);
+    font-weight: 900;
+  }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .pain-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--danger);
+    padding: 22px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .pain-card h4 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .pain-card p {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* PILLARS */
+  .pillar {
+    background: white;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    margin-bottom: 28px;
+    overflow: hidden;
+  }
+
+  .pillar-head {
+    background: linear-gradient(135deg, var(--ink), var(--forest));
+    color: var(--cream);
+    padding: 28px 30px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .pillar-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 58px;
+    line-height: 1;
+    font-weight: 900;
+    color: var(--wood-2);
+  }
+
+  .pillar-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 38px);
+    line-height: 1.05;
+    font-weight: 900;
+  }
+
+  .pillar-hook {
+    color: rgba(244,247,244,0.72);
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  .pillar-body {
+    padding: 30px;
+  }
+
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 24px;
+  }
+
+  .pillar-copy h4 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .pillar-copy p {
+    color: var(--forest);
+    font-size: 13px;
+    line-height: 1.82;
+    margin-bottom: 14px;
+  }
+
+  .format-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .format-item {
+    background: var(--highlight);
+    border: 1px solid var(--line);
+    padding: 14px 15px;
+  }
+
+  .format-item strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 13px;
+  }
+
+  .format-item span {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .script-box {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 18px 20px;
+    margin-top: 18px;
+    border-left: 4px solid var(--wood);
+  }
+
+  .script-box h4 {
+    color: var(--wood-2);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .script-box p, .script-box li {
+    color: rgba(244,247,244,0.82);
+    font-size: 12px;
+  }
+
+  .script-box ul { list-style: none; display: grid; gap: 7px; }
+  .script-box li { padding-left: 17px; position: relative; }
+  .script-box li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--wood-2);
+  }
+
+  .kpi-strip {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .kpi {
+    background: var(--mint);
+    border: 1px solid var(--line);
+    padding: 14px;
+  }
+
+  .kpi strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  .kpi span {
+    font-size: 10px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+  }
+
+  .roadmap {
+    display: grid;
+    gap: 16px;
+    counter-reset: step;
+    margin-top: 22px;
+  }
+
+  .phase {
+    counter-increment: step;
+    background: white;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    overflow: hidden;
+  }
+
+  .phase-num {
+    background: var(--ink);
+    color: var(--wood-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 900;
+  }
+
+  .phase-content {
+    padding: 22px 24px;
+  }
+
+  .phase h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .phase p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .phase-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer {
+    background: var(--ink);
+    color: rgba(244,247,244,0.62);
+    padding: 38px 64px;
+    margin-top: 40px;
+  }
+
+  .footer-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .footer-title {
+    color: var(--cream);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .footer p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.6px;
+  }
+
+  .mobile-note {
+    display: none;
+    margin-top: 14px;
+    padding: 12px 14px;
+    background: var(--mint);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  /* PRINT */
+  @media print {
+    .toc-wrap { position: static; }
+    body { background: white; }
+    .section { break-inside: avoid; }
+    .card, .callout, .pillar, .table-wrapper, .phase { box-shadow: none; }
+  }
+
+  /* TABLET */
+  @media(max-width: 980px) {
+    .masthead { padding: 58px 36px 46px; }
+    .container { padding: 0 36px; }
+    .hero-thesis, .split-box, .pillar-grid { grid-template-columns: 1fr; }
+    .meta-bar { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+    .grid-4, .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pain-grid { grid-template-columns: 1fr; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* MOBILE */
+  @media(max-width: 680px) {
+    body { font-size: 13px; line-height: 1.72; }
+    .masthead { padding: 42px 20px 36px; }
+    .masthead h1 { letter-spacing: -0.7px; }
+    .subtitle { font-size: 14px; }
+    .hero-thesis { gap: 12px; margin-top: 24px; }
+    .thesis-card { padding: 18px; }
+    .meta-bar { grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 26px; padding-top: 22px; }
+    .meta-label { font-size: 8px; }
+    .meta-val { font-size: 11px; }
+    .toc { padding: 0 10px; }
+    .toc a { padding: 14px 12px; font-size: 9px; }
+    .container { padding: 0 20px; }
+    .section { padding: 52px 0 38px; }
+    .section-header { grid-template-columns: 1fr; gap: 6px; margin-bottom: 26px; }
+    .section-num { font-size: 52px; }
+    .section-title h2 { font-size: 30px; }
+    .section-title p { font-size: 10px; }
+    .lead { font-size: 14px; }
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    .card { padding: 20px; }
+    .showroom-item { grid-template-columns: 42px 1fr; }
+    .sr-badge { grid-column: 2; justify-self: start; }
+    .bar-row { grid-template-columns: 1fr; gap: 6px; }
+    .bar-label { text-align: left; width: auto; }
+    .bar-val { margin-bottom: 5px; }
+    .split-left, .split-right { padding: 22px; }
+    .big-insight { padding: 24px 22px; }
+    .pillar-head { grid-template-columns: 1fr; gap: 4px; padding: 24px 22px; }
+    .pillar-num { font-size: 48px; }
+    .pillar-body { padding: 22px; }
+    .kpi-strip { grid-template-columns: 1fr 1fr; }
+    .phase { grid-template-columns: 1fr; }
+    .phase-num { min-height: 72px; }
+    .footer { padding: 28px 20px; }
+    .footer-inner { display: block; }
+    .footer p { margin-bottom: 10px; }
+    .mobile-note { display: block; }
+  }
+
+  @media(max-width: 420px) {
+    .meta-bar, .kpi-strip { grid-template-columns: 1fr; }
+    .masthead::after { display: none; }
+    table { min-width: 720px; }
+  }
+</style>
+</head>
+<body>
+<header class="masthead">
+<div class="masthead-inner">
+<div class="tag">FINAL PITCH STRATEGY · 2026 · MOBILE READY</div>
+<h1>Chiến Lược Tăng Trưởng<br/><span>Nội Thất Lam Sơn</span></h1>
+<p class="subtitle">
+      Bản pitch chiến lược dành cho thương hiệu nội thất gỗ tự nhiên: chuyển từ quảng cáo bán hàng ngắn hạn sang hệ thống nội dung xây niềm tin, tăng chất lượng lead và mở rộng tệp khách hàng mới.
+    </p>
+<div class="hero-thesis">
+<div class="thesis-card">
+<div class="thesis-label">Key thesis</div>
+<div class="thesis-big">Lam Sơn không thiếu sản phẩm tốt. Lam Sơn đang thiếu một cách kể chuyện đủ xứng với giá trị sản phẩm.</div>
+<p class="thesis-copy">
+          Gỗ thật, xưởng thật, thợ thật, bảo hành dài hạn là những tài sản rất mạnh. Nhưng khi được trình bày bằng ảnh tĩnh, web catalogue và thông điệp sale lặp lại, giá trị premium bị kéo xuống thành cảm giác mid-tier.
+        </p>
+</div>
+<div class="thesis-card">
+<div class="thesis-label">Strategic move</div>
+<div class="thesis-big">Biến xưởng, quy trình và khách thật thành “showroom online”.</div>
+<p class="thesis-copy">
+          Mục tiêu không chỉ là có thêm video. Mục tiêu là làm khách hiểu vì sao Lam Sơn đáng tiền trước khi họ nhắn tin cho sale.
+        </p>
+</div>
+</div>
+<div class="meta-bar">
+<div class="meta-item">
+<div class="meta-label">Thương hiệu</div>
+<div class="meta-val">Nội thất gỗ tự nhiên</div>
+</div>
+<div class="meta-item">
+<div class="meta-label">Thành lập</div>
+<div class="meta-val">2004 · 22 năm hoạt động</div>
+</div>
+<div class="meta-item">
+<div class="meta-label">Mô hình</div>
+<div class="meta-val">Lean Production · D2C</div>
+</div>
+<div class="meta-item">
+<div class="meta-label">Hệ thống</div>
+<div class="meta-val">Showroom · Xưởng · Kho · Nhà máy</div>
+</div>
+<div class="meta-item">
+<div class="meta-label">Mục tiêu pitch</div>
+<div class="meta-val">Giảm CPL · tăng trust · mở tệp mới</div>
+</div>
+</div>
+</div>
+</header>
+<div class="toc-wrap">
+<nav class="toc">
+<a href="#sec0">00 · Executive Summary</a>
+<a href="#sec1">01 · Vận hành</a>
+<a href="#sec2">02 · Digital Audit</a>
+<a href="#sec3">03 · Khách hàng</a>
+<a href="#sec4">04 · Đối thủ</a>
+<a href="#sec5">05 · Content Strategy</a>
+<a href="#sec6">06 · Roadmap</a>
+</nav>
+</div>
+<main class="container">
+<section class="section" id="sec0">
+<div class="section-header">
+<div class="section-num">00</div>
+<div class="section-title">
+<h2>Executive Summary</h2>
+<p>Vấn đề không nằm ở sản phẩm, mà nằm ở cách thị trường cảm nhận sản phẩm</p>
+</div>
+</div>
+<p class="lead">
+    Nội Thất Lam Sơn có những nền tảng rất khó sao chép: thời gian hoạt động dài, năng lực sản xuất thật, hệ thống xưởng/kho rõ ràng, đội ngũ thợ và tư vấn có kinh nghiệm, đồng thời sở hữu một lợi thế cốt lõi trong ngành nội thất là niềm tin vào chất liệu gỗ thật. Tuy nhiên, điểm nghẽn hiện tại nằm ở tầng “presentation”: website, hình ảnh, video, nội dung quảng cáo và câu chuyện thương hiệu chưa truyền tải được cảm giác đáng tiền.
+  </p>
+<div class="big-insight">
+<small>Pitch angle</small>
+<h3>Lam Sơn đang có “chất lượng xưởng”, nhưng lại giao tiếp bằng “ngôn ngữ catalogue”.</h3>
+<p>
+      Khách hàng không chỉ mua một chiếc giường, một cái tủ hay một bộ bàn ăn. Họ mua cảm giác yên tâm rằng món đồ này sẽ bền, đẹp, hợp nhà và xứng với số tiền bỏ ra. Nếu nội dung không chứng minh được điều đó, sale sẽ phải giải thích lại từ đầu cho từng lead.
+    </p>
+</div>
+<div class="grid-4">
+<div class="card">
+<div class="card-label">Vấn đề lớn nhất</div>
+<div class="card-val">Trust Gap</div>
+<div class="card-desc">Khách chưa thấy đủ bằng chứng hình ảnh để tin giá trị gỗ thật, quy trình thật và thành phẩm thật.</div>
+</div>
+<div class="card sage">
+<div class="card-label">Lỗ hổng lớn nhất</div>
+<div class="card-val">Video</div>
+<div class="card-desc">Thiếu video POV, thiếu B-roll xưởng, thiếu case nhà khách, thiếu content tư vấn chuyên gia.</div>
+</div>
+<div class="card rust">
+<div class="card-label">Rào cản lớn nhất</div>
+<div class="card-val">Mẫu mã</div>
+<div class="card-desc">Một phần khách trẻ cảm nhận thiết kế hơi cũ, nặng, chưa đủ lifestyle cho căn hộ hiện đại.</div>
+</div>
+<div class="card ink">
+<div class="card-label">Cơ hội lớn nhất</div>
+<div class="card-val">D2C</div>
+<div class="card-desc">Nếu kể chuyện đúng, mô hình xưởng thật có thể trở thành lợi thế marketing chứ không chỉ là lợi thế sản xuất.</div>
+</div>
+</div>
+<div class="callout green">
+<div class="callout-title">Kết luận điều hành</div>
+    Chiến lược đề xuất không phải “đăng thêm bài”. Đây là chuyển dịch từ mô hình <strong>quảng cáo đẩy sản phẩm</strong> sang mô hình <strong>nội dung xây niềm tin trước bán hàng</strong>. Khi khách hiểu giá trị trước khi inbox, lead ít hơn cũng có thể chất lượng hơn, sale đỡ mất công lọc, và ngân sách Ads không còn chỉ dùng để mua traffic lạnh.
+  </div>
+</section>
+<section class="section" id="sec1">
+<div class="section-header">
+<div class="section-num">01</div>
+<div class="section-title">
+<h2>Vận Hành &amp; Quy Mô Tinh Gọn</h2>
+<p>Cập nhật theo dữ liệu đã fix: 1 showroom trung tâm + xưởng + kho + nhà máy</p>
+</div>
+</div>
+<p class="lead">
+    Điểm cần sửa lớn trong bản nghiên cứu cũ là cách mô tả quy mô showroom. Thay vì xây câu chuyện theo hướng “mạng lưới nhiều showroom phủ thành phố”, bản pitch này định vị Lam Sơn theo mô hình tinh gọn hơn: một điểm showroom/VP để tư vấn và trưng bày, kết hợp xưởng sản xuất, kho hậu cần và nhà máy vùng nguyên liệu. Đây là cách kể hợp lý hơn với dữ liệu đã fix và cũng tạo ra một narrative mạnh hơn: <strong>ít phô trương mặt bằng, tập trung vào năng lực làm hàng thật.</strong>
+</p>
+<div class="grid-4">
+<div class="card">
+<div class="card-label">Mặt bằng vận hành</div>
+<div class="card-val">~120M</div>
+<div class="card-desc">Ước tính chi phí vận hành tập trung cho showroom trung tâm, xưởng, kho và logistics. Con số nên được dùng như giả định chiến lược, không trình bày như báo cáo tài chính chính thức.</div>
+</div>
+<div class="card sage">
+<div class="card-label">Nhân sự lõi</div>
+<div class="card-val">~30</div>
+<div class="card-desc">Đội ngũ gọn, thiên về thợ, tư vấn và hậu cần. Đây là lợi thế nếu content khai thác được con người thật phía sau sản phẩm.</div>
+</div>
+<div class="card">
+<div class="card-label">Traffic web/tháng</div>
+<div class="card-val">8–15K</div>
+<div class="card-desc">Tệp traffic có intent cao vì đến từ tìm kiếm sản phẩm nội thất, nhưng cần cải thiện trải nghiệm để tránh rơi lead ở mobile.</div>
+</div>
+<div class="card ink">
+<div class="card-label">Doanh thu mục tiêu</div>
+<div class="card-val">3–5 Tỷ</div>
+<div class="card-desc">Phù hợp khi không chỉ bán sản phẩm đơn lẻ mà tăng tỉ trọng combo phòng ngủ, may đo và dự án doanh nghiệp.</div>
+</div>
+</div>
+<h3 style="font-family:'Playfair Display',serif;font-size:24px;margin-top:34px;margin-bottom:14px;">Bản đồ vận hành thực tế</h3>
+<div class="showroom-list">
+<div class="showroom-item">
+<div class="sr-num">01</div>
+<div>
+<div class="sr-name">Showroom &amp; VP Thiết kế Bạch Đằng</div>
+<div class="sr-addr">161 Bạch Đằng, P.15, Bình Thạnh. Vai trò: tiếp khách, tư vấn, trưng bày mẫu, tạo niềm tin trực tiếp.</div>
+</div>
+<div class="sr-badge">Flagship</div>
+</div>
+<div class="showroom-item">
+<div class="sr-num">02</div>
+<div>
+<div class="sr-name">Xưởng SX Nội Thất May Đo Quận 12</div>
+<div class="sr-addr">116/70 TX13, P. Thạnh Xuân. Vai trò: sản xuất, hoàn thiện, chà nhám, kiểm tra chi tiết, may đo.</div>
+</div>
+<div class="sr-badge">Workshop</div>
+</div>
+<div class="showroom-item">
+<div class="sr-num">03</div>
+<div>
+<div class="sr-name">Tổng Kho &amp; Dịch vụ Di dời Gò Vấp</div>
+<div class="sr-addr">191 Đường số 4, P.16, Gò Vấp. Vai trò: lưu kho, hậu cần, giao nhận, bảo trì và điều phối lắp đặt.</div>
+</div>
+<div class="sr-badge">Logistics</div>
+</div>
+<div class="showroom-item">
+<div class="sr-num">04</div>
+<div>
+<div class="sr-name">Nhà Máy Sản Xuất Gỗ Đắk Lắk</div>
+<div class="sr-addr">Cụm CN Tân An II, Buôn Ma Thuột. Vai trò: nguồn cung, sản xuất gốc, bằng chứng về năng lực làm gỗ thật.</div>
+</div>
+<div class="sr-badge">Factory</div>
+</div>
+</div>
+<div class="split-box">
+<div class="split-left">
+<h3>Ý nghĩa chiến lược của mô hình Lean</h3>
+<p>
+        Mô hình tinh gọn không nên được kể như “ít showroom hơn”. Nên kể như một thương hiệu không đốt tiền vào mặt tiền quá nhiều, mà dồn năng lực vào sản xuất, chất liệu, thợ và hậu mãi.
+      </p>
+</div>
+<div class="split-right">
+<div class="mini-point">
+<div class="mini-num">1</div>
+<div><h4>Tối ưu chi phí cố định</h4><p>Giảm áp lực chi phí mặt bằng, tạo dư địa cho giá cạnh tranh và hậu mãi tốt hơn.</p></div>
+</div>
+<div class="mini-point">
+<div class="mini-num">2</div>
+<div><h4>Dễ chứng minh năng lực thật</h4><p>Xưởng, kho và nhà máy là “bằng chứng sống” cho video content, không cần dựng quá nhiều.</p></div>
+</div>
+<div class="mini-point">
+<div class="mini-num">3</div>
+<div><h4>Phù hợp chiến lược online</h4><p>Vì showroom ít hơn, website và video phải thay vai trò “trưng bày, giải thích, tạo tin”.</p></div>
+</div>
+</div>
+</div>
+<div class="callout">
+<div class="callout-title">Insight vận hành</div>
+    Nếu Lam Sơn có ít điểm trưng bày hơn các đối thủ phủ showroom, thì chiến lược đúng không phải là cố tỏ ra “có mạng lưới lớn”. Chiến lược đúng là làm cho khách hàng online <strong>nhìn thấy quy trình thật rõ đến mức họ cảm giác đã đi showroom trước khi bước tới Bạch Đằng</strong>.
+  </div>
+</section>
+<section class="section" id="sec2">
+<div class="section-header">
+<div class="section-num">02</div>
+<div class="section-title">
+<h2>Kiểm Toán Digital, Website &amp; Visual Branding</h2>
+<p>Lỗ hổng hình ảnh đang làm giảm cảm nhận giá trị của sản phẩm gỗ tự nhiên</p>
+</div>
+</div>
+<p class="lead">
+    Điểm yếu digital của Lam Sơn không phải là “không có mặt online”. Vấn đề nằm ở chỗ phần lớn điểm chạm online chưa tạo ra cảm giác cao cấp, đáng tin và hiện đại. Trong ngành nội thất, hình ảnh không chỉ để minh họa sản phẩm. Hình ảnh chính là bằng chứng đầu tiên về gu thẩm mỹ, chất lượng hoàn thiện và độ đáng tiền.
+  </p>
+<div class="big-insight">
+<small>Core diagnostic</small>
+<h3>Lam Sơn đang bán đồ gỗ tự nhiên bằng trải nghiệm hình ảnh chưa tương xứng với giá tiền.</h3>
+<p>
+      Khi ảnh sản phẩm bị phẳng, thiếu ánh sáng, thiếu bối cảnh nhà thật và thiếu cận cảnh vân gỗ, khách hàng không cảm được “gỗ thật”. Họ chỉ thấy một món đồ trong catalogue. Khi đó, giá cao hơn hàng chợ hoặc hàng công nghiệp trở thành rào cản thay vì minh chứng cho chất lượng.
+    </p>
+</div>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Hạng mục</th>
+<th>Thực trạng quan sát</th>
+<th>Tác động tới bán hàng</th>
+<th>Hướng xử lý đề xuất</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Website UX</strong></td>
+<td>Trải nghiệm thiên về catalogue, nhiều trang sản phẩm nhưng thiếu flow tư vấn theo nhu cầu: phòng nhỏ, nhà mới, combo cưới, căn hộ chung cư, gia đình có trẻ nhỏ.</td>
+<td>Khách có nhu cầu thật nhưng phải tự tìm quá nhiều. Khi không hiểu nên chọn gì, họ rời trang hoặc nhắn tin hỏi giá rất chung chung.</td>
+<td>Tạo landing page theo nhu cầu: “Phòng ngủ căn hộ 12m²”, “Combo phòng cưới”, “Tủ gỗ tự nhiên cho nhà phố”, “Nội thất văn phòng gỗ thật”.</td>
+</tr>
+<tr>
+<td><strong>Mobile Experience</strong></td>
+<td>Khách nội thất thường lướt bằng điện thoại, nhưng nội dung dài và ảnh nhiều dễ làm trải nghiệm bị nặng, đặc biệt khi thiếu cấu trúc so sánh nhanh.</td>
+<td>Lead rơi ở giai đoạn xem sản phẩm. Khách chưa kịp hiểu giá trị đã thấy mệt vì phải scroll và hỏi thủ công.</td>
+<td>Tối ưu mobile-first: thẻ USP ngắn, ảnh before/after, video 15–30s, CTA Zalo cố định, bảng giá từ khoảng “tham khảo từ”.</td>
+</tr>
+<tr>
+<td><strong>Ảnh sản phẩm</strong></td>
+<td>Nhiều ảnh có cảm giác studio/catalogue, thiếu ánh sáng tự nhiên, thiếu bối cảnh sống thật, thiếu close-up vân gỗ và chi tiết hoàn thiện.</td>
+<td>Sản phẩm nhìn chưa “đắt”. Khách không thấy khác biệt giữa gỗ thật Lam Sơn và hàng phổ thông.</td>
+<td>Chụp lại theo bộ visual mới: lifestyle trong nhà thật, macro vân gỗ, tay thợ hoàn thiện, góc ánh sáng chiều, ảnh so sánh trước/sau.</td>
+</tr>
+<tr>
+<td><strong>Video Ads</strong></td>
+<td>Thiếu short-form video có hook rõ. Chưa khai thác POV từ xưởng đến nhà khách, quá trình kiểm gỗ, lắp đặt, bàn giao.</td>
+<td>Ads phụ thuộc vào ảnh tĩnh nên dễ bị CPM cao, CTR thấp, thiếu tín hiệu engagement tự nhiên.</td>
+<td>Chuyển 30–40% ngân sách creative sang video: POV, B-roll, giải thích gỗ, case nhà thật, testimonial ngắn.</td>
+</tr>
+<tr>
+<td><strong>Thông điệp bán hàng</strong></td>
+<td>Thông điệp dễ rơi vào “giá tốt”, “ưu đãi”, “liên hệ tư vấn”, trong khi chưa giải thích đủ vì sao giá đó hợp lý.</td>
+<td>Khách so sánh bằng giá thay vì so sánh bằng chất lượng. Sale phải xử lý phản đối “sao mắc vậy?” nhiều hơn.</td>
+<td>Đổi trọng tâm từ “giá” sang “giá trị”: tuổi gỗ, mộng, độ dày, bảo hành, khả năng may đo, hậu mãi, đội lắp đặt.</td>
+</tr>
+<tr>
+<td><strong>Social Proof</strong></td>
+<td>Feedback khách hàng, nhà khách thật và case bàn giao chưa được đóng gói thành asset bán hàng rõ ràng.</td>
+<td>Thiếu bằng chứng xã hội. Khách khó hình dung sản phẩm khi đưa vào căn hộ thật sẽ ra sao.</td>
+<td>Xây thư viện “Nhà khách Lam Sơn”: ảnh/video bàn giao, testimonial 30s, review sau 6 tháng, case theo diện tích/phong cách.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="grid-3">
+<div class="pain-card">
+<h4>1. Website chưa đóng vai trò sale tự động</h4>
+<p>Website hiện có chức năng trưng bày, nhưng chưa đủ vai trò tư vấn và lọc nhu cầu. Khách vẫn phải inbox để biết nên mua gì, giá khoảng bao nhiêu, gỗ nào hợp nhà.</p>
+</div>
+<div class="pain-card">
+<h4>2. Visual chưa nâng perception premium</h4>
+<p>Nội thất gỗ tự nhiên phải được bán bằng cảm giác: vân gỗ, độ chắc, tiếng đóng mộng, ánh sáng trong nhà thật. Nếu ảnh chỉ là catalogue, giá trị bị mỏng đi.</p>
+</div>
+<div class="pain-card">
+<h4>3. Ads đang thiếu “bằng chứng”</h4>
+<p>Ảnh tĩnh có thể tạo nhận diện, nhưng khó xử lý nghi ngờ về chất lượng thật. Video quy trình và nhà khách thật mới là asset giảm phản đối hiệu quả.</p>
+</div>
+</div>
+<div class="callout danger">
+<div class="callout-title">Rủi ro nếu không thay đổi</div>
+    Nếu tiếp tục bán bằng ảnh tĩnh và thông điệp sale, Lam Sơn sẽ bị kéo vào cuộc chiến giá với hàng phổ thông. Trong khi đó, tệp khách trẻ đang học cách mua nội thất qua TikTok, Reels, YouTube Shorts và review thật. Người thắng không nhất thiết là người có sản phẩm tốt nhất, mà là người chứng minh sản phẩm tốt thuyết phục nhất.
+  </div>
+</section>
+<section class="section" id="sec3">
+<div class="section-header">
+<div class="section-num">03</div>
+<div class="section-title">
+<h2>Sản Phẩm &amp; Tâm Lý Khách Hàng</h2>
+<p>Không phải khách chỉ hỏi giá. Họ đang hỏi: “món này có đáng với nhà mình không?”</p>
+</div>
+</div>
+<p class="lead">
+    Với nội thất gỗ tự nhiên, quyết định mua thường không bốc đồng. Khách có thể xem nhiều ngày, hỏi nhiều nơi, so sánh chất liệu, hỏi gia đình, cân nhắc vận chuyển, bảo hành và độ hợp với nhà. Vì vậy nội dung tốt phải làm ba việc cùng lúc: <strong>giải thích giá trị, giảm nỗi sợ và tạo hình dung sống thật.</strong>
+</p>
+<div class="grid-2">
+<div class="card sage">
+<div class="card-label">Tỉ trọng doanh thu ước tính</div>
+<div class="bar-chart">
+<div class="bar-row">
+<div class="bar-label">Giường ngủ / tủ</div>
+<div class="bar-track"><div class="bar-fill" style="width:82%"></div></div>
+<div class="bar-val">Core</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">Bàn học / làm việc</div>
+<div class="bar-track"><div class="bar-fill" style="width:58%"></div></div>
+<div class="bar-val">Lead</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">May đo / combo</div>
+<div class="bar-track"><div class="bar-fill" style="width:48%"></div></div>
+<div class="bar-val">Upsell</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">Dự án B2B</div>
+<div class="bar-track"><div class="bar-fill" style="width:34%"></div></div>
+<div class="bar-val">Growth</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-label">Nhận định sản phẩm</div>
+<h3 style="font-family:'Playfair Display',serif;font-size:28px;line-height:1.15;margin-bottom:12px;">Lam Sơn có “xương sống sản phẩm” tốt, nhưng cần làm mới cách đóng gói cảm nhận.</h3>
+<p class="card-desc" style="font-size:13px;">
+        Các sản phẩm giường, tủ, bàn làm việc, bàn ăn và may đo có nền tảng nhu cầu rõ. Nhưng khi hình ảnh chưa hiện đại, nhóm khách mới dễ gắn thương hiệu với cảm giác “đồ gỗ bền cho thế hệ trước” hơn là “nội thất gỗ thật cho nhà hiện đại”.
+      </p>
+</div>
+</div>
+<h3 style="font-family:'Playfair Display',serif;font-size:26px;margin:36px 0 16px;">3 tệp khách hàng cần nhìn riêng</h3>
+<div class="grid-3">
+<div class="segment">
+<div class="tagline">Core customer</div>
+<h3>Gia đình 32–50 tuổi</h3>
+<ul>
+<li>Ưu tiên bền, chắc, bảo hành, ít hỏng vặt.</li>
+<li>Có xu hướng tin thương hiệu lâu năm và thích nhìn hàng thật.</li>
+<li>Dễ mua giường, tủ, bàn ăn, combo phòng ngủ.</li>
+<li>Rào cản: cần chứng minh chất lượng và hậu mãi rõ ràng.</li>
+</ul>
+</div>
+<div class="segment">
+<div class="tagline">Growth customer</div>
+<h3>Người mua nhà lần đầu 27–38 tuổi</h3>
+<ul>
+<li>Đang setup căn hộ, nhà phố nhỏ, phòng cưới hoặc phòng trẻ em.</li>
+<li>Thích hình ảnh đẹp, sạch, hiện đại, có before/after.</li>
+<li>Sẵn sàng trả tiền nếu thấy món đồ “nâng cấp không gian”.</li>
+<li>Rào cản: mẫu mã nhìn hơi cũ, thiếu cảm giác lifestyle.</li>
+</ul>
+</div>
+<div class="segment">
+<div class="tagline">Opportunity customer</div>
+<h3>Khách doanh nghiệp / dự án</h3>
+<ul>
+<li>Cần độ bền, tiến độ, năng lực thi công và hóa đơn chứng từ.</li>
+<li>Quan tâm case thực tế hơn là bài đăng bán lẻ.</li>
+<li>Giá trị đơn hàng cao hơn, chu kỳ bán dài hơn nhưng đáng đầu tư.</li>
+<li>Rào cản: chưa thấy đủ portfolio dự án được đóng gói chuyên nghiệp.</li>
+</ul>
+</div>
+</div>
+<h3 style="font-family:'Playfair Display',serif;font-size:26px;margin:36px 0 16px;">Feedback &amp; rào cản cần xử lý trong pitch</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Feedback / Rào cản</th>
+<th>Điều khách thực sự đang nói</th>
+<th>Cách xử lý bằng content</th>
+<th>Tài sản cần sản xuất</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>“Mẫu mã hơi cũ”</strong></td>
+<td>Khách không phủ nhận độ bền, nhưng chưa thấy sản phẩm phù hợp căn hộ hiện đại, nhà tối giản, phòng nhỏ hoặc gu trẻ.</td>
+<td>Tạo series decor lại sản phẩm trong không gian trẻ hơn: bedding sáng màu, cây xanh, ánh sáng tự nhiên, phối với căn hộ nhỏ.</td>
+<td>Ảnh lifestyle mới, video before/after, moodboard “gỗ thật nhưng không già”.</td>
+</tr>
+<tr>
+<td><strong>“Ảnh nhìn chưa xứng giá”</strong></td>
+<td>Khách chưa cảm được độ dày, vân gỗ, chi tiết hoàn thiện, cảm giác chắc tay.</td>
+<td>Quay close-up macro: cạnh bo, vân gỗ, mộng, bề mặt sơn, tiếng đóng/mở ngăn kéo.</td>
+<td>B-roll 4K, video ASMR gỗ, bộ ảnh macro, carousel so sánh trước/sau.</td>
+</tr>
+<tr>
+<td><strong>“Sao mắc hơn chỗ khác?”</strong></td>
+<td>Khách đang so bằng giá vì chưa hiểu khác biệt giữa gỗ thật, may đo, bảo hành và hàng phổ thông.</td>
+<td>Làm content “giải mã giá”: tiền nằm ở đâu, gỗ dày hơn ở chỗ nào, bảo hành xử lý ra sao, chi phí rẻ ban đầu có thể thành đắt lâu dài.</td>
+<td>Video tư vấn, infographic, landing page “vì sao gỗ thật đáng tiền”.</td>
+</tr>
+<tr>
+<td><strong>“Sợ giao trễ / lắp không kỹ”</strong></td>
+<td>Khách sợ nội thất ảnh hưởng lịch dọn nhà, lịch cưới, bàn giao căn hộ.</td>
+<td>Show quy trình timeline: tư vấn, đo đạc, sản xuất, kiểm hàng, đóng gói, giao, lắp, vệ sinh.</td>
+<td>POV giao hàng, checklist bàn giao, testimonial khách sau lắp đặt.</td>
+</tr>
+<tr>
+<td><strong>“Không biết chọn mẫu nào”</strong></td>
+<td>Khách không thiếu nhu cầu, họ thiếu người hướng dẫn chọn đúng với nhà mình.</td>
+<td>Làm content tư vấn theo diện tích, phong thủy, màu sàn, màu tường, ngân sách, số người dùng.</td>
+<td>Series “Chọn đúng trong 60s”, quiz tư vấn, CTA gửi ảnh phòng để được gợi ý.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="big-insight">
+<small>Customer truth</small>
+<h3>Khách không chê Lam Sơn đắt. Họ chưa thấy đủ lý do để tự nói: “giá này đáng”.</h3>
+<p>
+      Nhiệm vụ của content là khiến khách tự đi qua quá trình thuyết phục: thấy gỗ thật, thấy thợ thật, thấy nhà khách thật, hiểu vì sao mẫu này hợp nhà mình, rồi mới nhắn tin. Khi đó, cuộc trò chuyện với sale bắt đầu ở tầng chất lượng, không phải tầng mặc cả.
+    </p>
+</div>
+</section>
+<section class="section" id="sec4">
+<div class="section-header">
+<div class="section-num">04</div>
+<div class="section-title">
+<h2>Ma Trận Đối Thủ &amp; Khoảng Trống</h2>
+<p>Lam Sơn mạnh sản phẩm, nhưng cần thắng ở tầng storytelling và bằng chứng thị giác</p>
+</div>
+</div>
+<p class="lead">
+    Các đối thủ trong ngành nội thất thường thắng ở một trong ba hướng: giá rẻ, lifestyle đẹp, hoặc giáo dục khách hàng. Lam Sơn có thể không cần lao vào cuộc chiến rẻ nhất. Cơ hội tốt hơn là trở thành thương hiệu “gỗ thật đáng tin” được kể bằng ngôn ngữ video hiện đại.
+  </p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Thương hiệu / nhóm đối thủ</th>
+<th>Chiến lược nổi bật</th>
+<th>Điểm họ đang làm tốt</th>
+<th>Khoảng trống để Lam Sơn khai thác</th>
+<th>Định vị đề xuất</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Đồ Gỗ Giá Kho</strong></td>
+<td>Đánh mạnh giá, livestream, ưu đãi, chốt nhanh.</td>
+<td>Dễ hiểu, trực diện, phù hợp khách săn deal.</td>
+<td>Hình ảnh dễ bị cảm nhận rẻ, khó xây premium trust.</td>
+<td>Lam Sơn không cần rẻ nhất, cần chứng minh “đáng tiền hơn”.</td>
+</tr>
+<tr>
+<td><strong>Minh Khôi / nhóm tư vấn gỗ</strong></td>
+<td>Nội dung giáo dục, video chia sẻ chất liệu, tư vấn mua hàng.</td>
+<td>Có authority, giải thích được sản phẩm.</td>
+<td>Có thể chưa có đủ câu chuyện xưởng, hậu cần, case nhà khách thật.</td>
+<td>Lam Sơn cần kết hợp giáo dục + bằng chứng quy trình thật.</td>
+</tr>
+<tr>
+<td><strong>JYSK / Chilai / nhóm lifestyle</strong></td>
+<td>Hình ảnh đẹp, decor tốt, cảm giác hiện đại.</td>
+<td>Tạo cảm hứng sống, visual premium, dễ hút khách trẻ.</td>
+<td>Không sở hữu câu chuyện gỗ tự nhiên Việt, may đo và xưởng thật như Lam Sơn.</td>
+<td>Lam Sơn cần học cách trình bày lifestyle, nhưng giữ lợi thế gỗ thật.</td>
+</tr>
+<tr>
+<td><strong>Lam Sơn hiện tại</strong></td>
+<td>Facebook/website thiên ảnh tĩnh, thông điệp sản phẩm và uy tín lâu năm.</td>
+<td>Có nền tảng sản phẩm, xưởng, bảo hành, thương hiệu lâu năm.</td>
+<td>Thiếu video POV, thiếu content tư vấn, thiếu case B2B, thiếu đóng gói nhà khách thật.</td>
+<td><strong>Gỗ thật, xưởng thật, nhà thật, người thật.</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="grid-3">
+<div class="card sage">
+<div class="card-label">Gap #1</div>
+<h3 style="font-family:'Playfair Display',serif;font-size:24px;line-height:1.15;margin-bottom:10px;">Showroom online bằng POV</h3>
+<p class="card-desc">Ít thương hiệu gỗ tự nhiên đang làm tốt hành trình từ xưởng đến nhà khách. Đây là nơi Lam Sơn có thể biến tài sản vận hành thành tài sản truyền thông.</p>
+</div>
+<div class="card">
+<div class="card-label">Gap #2</div>
+<h3 style="font-family:'Playfair Display',serif;font-size:24px;line-height:1.15;margin-bottom:10px;">Tư vấn lọc khách</h3>
+<p class="card-desc">Khách cần được giải thích về giá trị gỗ thật trước khi nói chuyện với sale. Content tư vấn tốt giúp giảm lead rác và tăng tỉ lệ chốt.</p>
+</div>
+<div class="card ink">
+<div class="card-label">Gap #3</div>
+<h3 style="font-family:'Playfair Display',serif;font-size:24px;line-height:1.15;margin-bottom:10px;">Portfolio dự án B2B</h3>
+<p class="card-desc">Các deal lớn cần bằng chứng năng lực. Nếu đóng gói case nhà hàng, văn phòng, ngân hàng, Lam Sơn có thể mở thêm kênh doanh thu không phụ thuộc bán lẻ.</p>
+</div>
+</div>
+<div class="callout green">
+<div class="callout-title">Chiến lược cạnh tranh</div>
+    Không nên định vị Lam Sơn là “rẻ hơn”. Cũng không nên chỉ định vị là “lâu năm”. Câu chuyện nên là: <strong>Lam Sơn là thương hiệu gỗ thật có năng lực sản xuất thật, được trình bày lại bằng ngôn ngữ hiện đại để khách mới hiểu và tin nhanh hơn.</strong>
+</div>
+</section>
+<section class="section" id="sec5">
+<div class="section-header">
+<div class="section-num">05</div>
+<div class="section-title">
+<h2>Chiến Lược Nội Dung 3 Trụ Cột</h2>
+<p>Phần trọng tâm để pitch: không làm content cho vui, làm content để giảm ma sát bán hàng</p>
+</div>
+</div>
+<p class="lead">
+    Section 5 được thiết kế lại theo đúng 3 trụ cột bạn yêu cầu: <strong>POV trải nghiệm thật</strong>, <strong>tư vấn &amp; thanh lọc khách</strong>, và <strong>B2B/dự án doanh nghiệp</strong>. Mỗi trụ cột không chỉ có ý tưởng, mà có vai trò trong phễu bán hàng, format triển khai, hook mẫu, KPI và tác động lên Ads.
+  </p>
+<div class="pillar">
+<div class="pillar-head">
+<div class="pillar-num">01</div>
+<div>
+<div class="pillar-title">POV: Trải Nghiệm Thật</div>
+<div class="pillar-hook">Biến xưởng, kho, đội giao hàng và nhà khách thành showroom online.</div>
+</div>
+</div>
+<div class="pillar-body">
+<div class="pillar-grid">
+<div class="pillar-copy">
+<h4>Vai trò chiến lược</h4>
+<p>
+            POV là trụ cột quan trọng nhất vì nó xử lý điểm yếu lớn nhất của Lam Sơn: khách online chưa nhìn thấy đủ “thật”. Với ngành nội thất gỗ tự nhiên, niềm tin không đến từ câu nói “gỗ thật 100%”, mà đến từ cảm giác nhìn thấy tay thợ cắt, chà, ráp, đóng gói, bưng vào nhà và lau dọn sau bàn giao.
+          </p>
+<p>
+            POV không chỉ là video hậu trường. Nó là cách thay thế trải nghiệm showroom cho khách chưa đến showroom. Khi khách thấy quy trình, họ bớt nghi ngờ ảnh ảo, bớt sợ chất lượng thực tế không như hình, và dễ hiểu vì sao giá cao hơn hàng phổ thông.
+          </p>
+<h4>Thông điệp chính</h4>
+<ul class="bullet-list">
+<li><strong>Việc thật:</strong> quay đúng quy trình, không dựng quá đà.</li>
+<li><strong>Thợ thật:</strong> cho thấy bàn tay, thao tác, sự kỹ tính.</li>
+<li><strong>Gỗ thật:</strong> cận cảnh vân gỗ, độ dày, mộng, bề mặt hoàn thiện.</li>
+<li><strong>Nhà thật:</strong> sản phẩm xuất hiện trong không gian khách hàng, không chỉ trong studio.</li>
+</ul>
+</div>
+<div>
+<div class="format-list">
+<div class="format-item">
+<strong>Format 1 · “Một đơn hàng đi qua những bước nào?”</strong>
+<span>Video 45–60s: nhận đơn → chọn gỗ → sản xuất → kiểm hàng → đóng gói → giao → lắp → bàn giao.</span>
+</div>
+<div class="format-item">
+<strong>Format 2 · “POV thợ Lam Sơn lắp giường cho khách”</strong>
+<span>Góc quay action cam, ít lời, nhiều chi tiết tay nghề, chốt bằng cảnh lau dọn sạch và khách kiểm hàng.</span>
+</div>
+<div class="format-item">
+<strong>Format 3 · “Cận cảnh món đồ trước khi giao”</strong>
+<span>Macro vân gỗ, cạnh bo, ray kéo, khớp nối, bề mặt sơn, âm thanh đóng mở.</span>
+</div>
+<div class="format-item">
+<strong>Format 4 · “Từ xưởng Q.12 đến căn hộ khách”</strong>
+<span>Story nhẹ: món đồ rời xưởng, lên xe, vào thang máy, đặt vào phòng, không gian thay đổi.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="script-box">
+<h4>Hook mẫu để quay ngay</h4>
+<ul>
+<li>“Một chiếc giường gỗ thật trước khi vào nhà khách phải đi qua những bước này.”</li>
+<li>“Đây là phần khách không thấy khi chỉ nhìn ảnh sản phẩm trên web.”</li>
+<li>“Vì sao cùng là giường gỗ, có chỗ rẻ hơn nhưng dùng vài năm lại kêu?”</li>
+<li>“POV: Theo chân đội Lam Sơn giao một bộ phòng ngủ trong một buổi sáng.”</li>
+<li>“Cận cảnh chi tiết khiến một món đồ gỗ tự nhiên nhìn đơn giản nhưng không hề rẻ.”</li>
+</ul>
+</div>
+<div class="kpi-strip">
+<div class="kpi"><strong>3–5</strong><span>video/tuần</span></div>
+<div class="kpi"><strong>30–60s</strong><span>độ dài chính</span></div>
+<div class="kpi"><strong>2x</strong><span>asset dùng lại cho ads</span></div>
+<div class="kpi"><strong>-20%</strong><span>CPL mục tiêu giai đoạn đầu</span></div>
+</div>
+</div>
+</div>
+<div class="pillar">
+<div class="pillar-head">
+<div class="pillar-num">02</div>
+<div>
+<div class="pillar-title">Tư Vấn &amp; Thanh Lọc Khách</div>
+<div class="pillar-hook">Giải thích giá trị trước khi khách inbox, để sale chỉ cần chốt người đã hiểu.</div>
+</div>
+</div>
+<div class="pillar-body">
+<div class="pillar-grid">
+<div class="pillar-copy">
+<h4>Vai trò chiến lược</h4>
+<p>
+            Trụ cột tư vấn giúp Lam Sơn thoát khỏi cuộc chiến “báo giá nhanh”. Khi khách chỉ hỏi “giá bao nhiêu”, nghĩa là nội dung trước đó chưa làm đủ việc. Content tư vấn phải trả lời các câu hỏi mà sale đang phải lặp lại mỗi ngày: gỗ nào bền, phòng nhỏ chọn tủ mấy cánh, giường gỗ thật khác gì MDF, màu nào hợp căn hộ, vì sao bảo hành 5 năm quan trọng.
+          </p>
+<p>
+            Đây là trụ cột giúp <strong>lọc khách</strong>. Người chỉ săn rẻ sẽ tự rời đi sau khi hiểu Lam Sơn không bán hàng “rẻ nhất”. Người thật sự muốn bền, đẹp và yên tâm sẽ ở lại với tâm thế sẵn sàng trả tiền hơn.
+          </p>
+<h4>Thông điệp chính</h4>
+<ul class="bullet-list">
+<li><strong>Không bán rẻ, bán đúng:</strong> đúng chất liệu, đúng kích thước, đúng nhu cầu.</li>
+<li><strong>Giá trị nằm trong thứ khách không nhìn thấy:</strong> kết cấu, độ dày, bảo hành, tay nghề.</li>
+<li><strong>Tư vấn như chuyên gia:</strong> giúp khách tránh sai lầm, không chỉ đẩy sản phẩm.</li>
+<li><strong>Thanh lọc khách:</strong> giảm khách hỏi chơi, tăng khách có nhu cầu nghiêm túc.</li>
+</ul>
+</div>
+<div>
+<div class="format-list">
+<div class="format-item">
+<strong>Format 1 · “3 sai lầm khi mua giường gỗ”</strong>
+<span>Nêu lỗi phổ biến: chỉ nhìn giá, không hỏi độ dày, không hỏi bảo hành, không kiểm kết cấu.</span>
+</div>
+<div class="format-item">
+<strong>Format 2 · “Phòng 12m² nên chọn tủ thế nào?”</strong>
+<span>Content theo tình huống thực tế, giúp khách căn hộ nhỏ thấy Lam Sơn hiểu vấn đề của họ.</span>
+</div>
+<div class="format-item">
+<strong>Format 3 · “Gỗ thật vì sao mắc hơn?”</strong>
+<span>Giải mã giá trị bằng hình ảnh: nguyên liệu, thợ, thời gian hoàn thiện, bảo hành, vận chuyển.</span>
+</div>
+<div class="format-item">
+<strong>Format 4 · “Mẫu gỗ thật nhưng không già”</strong>
+<span>Trẻ hóa perception bằng phối cảnh hiện đại, ga giường sáng, decor tối giản, ánh sáng tự nhiên.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="script-box">
+<h4>Hook mẫu để quay ngay</h4>
+<ul>
+<li>“Nếu bạn mua giường gỗ lần đầu, đừng hỏi giá trước. Hãy hỏi 3 điều này.”</li>
+<li>“Gỗ thật không tự động đẹp. Đẹp hay không nằm ở cách chọn mẫu và phối phòng.”</li>
+<li>“Vì sao nhiều người thấy đồ gỗ tự nhiên bị ‘già’? Đây là cách chọn để không bị vậy.”</li>
+<li>“Cùng một phòng 12m², chọn sai tủ là phòng chật ngay.”</li>
+<li>“Một món đồ rẻ lúc mua có thể đắt sau 2 năm nếu bạn bỏ qua chi tiết này.”</li>
+</ul>
+</div>
+<div class="kpi-strip">
+<div class="kpi"><strong>2–3</strong><span>video tư vấn/tuần</span></div>
+<div class="kpi"><strong>20+</strong><span>FAQ biến thành content</span></div>
+<div class="kpi"><strong>+30%</strong><span>lead có nhu cầu rõ</span></div>
+<div class="kpi"><strong>-25%</strong><span>thời gian sale giải thích lại</span></div>
+</div>
+</div>
+</div>
+<div class="pillar">
+<div class="pillar-head">
+<div class="pillar-num">03</div>
+<div>
+<div class="pillar-title">B2B / Dự Án Doanh Nghiệp</div>
+<div class="pillar-hook">Đóng gói năng lực thi công để mở pipeline đơn hàng lớn.</div>
+</div>
+</div>
+<div class="pillar-body">
+<div class="pillar-grid">
+<div class="pillar-copy">
+<h4>Vai trò chiến lược</h4>
+<p>
+            Bán lẻ giúp có dòng tiền đều, nhưng B2B/dự án mới là nhóm có giá trị đơn hàng lớn và khả năng mở rộng doanh thu. Với khách doanh nghiệp, họ không chỉ cần xem một sản phẩm đẹp. Họ cần thấy năng lực giao đúng hẹn, đồng bộ số lượng, xử lý kỹ thuật, hóa đơn, bảo hành và khả năng phối hợp với mặt bằng thực tế.
+          </p>
+<p>
+            Trụ cột này giúp Lam Sơn thoát khỏi hình ảnh chỉ là “shop bán đồ gỗ” để trở thành <strong>đối tác cung ứng nội thất gỗ tự nhiên cho nhà hàng, văn phòng, ngân hàng, homestay, trường học, spa và chuỗi cửa hàng</strong>.
+          </p>
+<h4>Thông điệp chính</h4>
+<ul class="bullet-list">
+<li><strong>Có xưởng thật:</strong> xử lý được đơn may đo và số lượng.</li>
+<li><strong>Có kho và logistics:</strong> đảm bảo giao nhận, lắp đặt, bảo trì.</li>
+<li><strong>Có quy trình:</strong> đo đạc, sản xuất, nghiệm thu, bàn giao.</li>
+<li><strong>Có uy tín lâu năm:</strong> phù hợp khách cần đối tác ổn định.</li>
+</ul>
+</div>
+<div>
+<div class="format-list">
+<div class="format-item">
+<strong>Format 1 · “Case study dự án”</strong>
+<span>Trình bày theo bài toán khách hàng, giải pháp Lam Sơn, timeline, kết quả bàn giao.</span>
+</div>
+<div class="format-item">
+<strong>Format 2 · “Một ngày thi công văn phòng/nhà hàng”</strong>
+<span>POV đội thi công xử lý mặt bằng thật, đo, lắp, kiểm, bàn giao.</span>
+</div>
+<div class="format-item">
+<strong>Format 3 · “Năng lực xưởng cho đơn số lượng”</strong>
+<span>Show máy móc, thợ, kho, đóng gói, checklist QC, cách đảm bảo đồng bộ.</span>
+</div>
+<div class="format-item">
+<strong>Format 4 · “B2B credential page”</strong>
+<span>Một landing page riêng cho doanh nghiệp: portfolio, ngành phục vụ, quy trình, form nhận brief.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="script-box">
+<h4>Hook mẫu để quay ngay</h4>
+<ul>
+<li>“Một dự án nội thất doanh nghiệp cần gì ngoài sản phẩm đẹp?”</li>
+<li>“Đây là cách Lam Sơn kiểm tra một lô hàng trước khi bàn giao cho khách dự án.”</li>
+<li>“Khách B2B sợ nhất trễ tiến độ. Quy trình của chúng tôi xử lý thế nào?”</li>
+<li>“Từ bản vẽ đến bàn giao: một đơn may đo đi qua những bước này.”</li>
+<li>“Không chỉ bán bàn ghế, Lam Sơn cung cấp sự ổn định cho mặt bằng kinh doanh.”</li>
+</ul>
+</div>
+<div class="kpi-strip">
+<div class="kpi"><strong>1</strong><span>case study/tháng</span></div>
+<div class="kpi"><strong>1</strong><span>landing B2B riêng</span></div>
+<div class="kpi"><strong>5–10</strong><span>lead doanh nghiệp/tháng</span></div>
+<div class="kpi"><strong>High</strong><span>giá trị đơn hàng</span></div>
+</div>
+</div>
+</div>
+<div class="callout green">
+<div class="callout-title">Cách 3 trụ cột phối hợp với nhau</div>
+<strong>POV</strong> tạo niềm tin, <strong>Tư vấn</strong> tạo hiểu biết và lọc nhu cầu, <strong>B2B</strong> mở nhóm khách giá trị cao. Nếu làm đồng bộ, content không còn là “đăng cho có”, mà trở thành hệ thống tiền xử lý bán hàng: khách hiểu trước, tin trước, và nhắn tin với nhu cầu rõ hơn.
+  </div>
+</section>
+<section class="section" id="sec6">
+<div class="section-header">
+<div class="section-num">06</div>
+<div class="section-title">
+<h2>Roadmap Triển Khai &amp; Kết Quả Kỳ Vọng</h2>
+<p>12 tuần để chuyển từ ảnh tĩnh rời rạc sang content engine có thể scale Ads</p>
+</div>
+</div>
+<p class="lead">
+    Đề xuất triển khai theo 12 tuần, không bắt đầu bằng việc làm thật nhiều kênh cùng lúc. Bắt đầu bằng việc tạo asset đúng: video xưởng, video tư vấn, video nhà khách, rồi mới dùng các asset tốt nhất để chạy Ads và build landing page tương ứng.
+  </p>
+<div class="roadmap">
+<div class="phase">
+<div class="phase-num">1</div>
+<div class="phase-content">
+<h3>Tuần 1–2 · Setup chiến lược &amp; quay asset nền</h3>
+<p>Xác định danh sách FAQ từ sale, chọn 10 sản phẩm chủ lực, quay 1 ngày tại showroom/xưởng/kho, gom tư liệu POV và B-roll. Đồng thời xây khung visual mới: màu gỗ, ánh sáng, bố cục, font chữ, CTA.</p>
+<div class="phase-meta">
+<span class="pill green">Output: 30–50 clip thô</span>
+<span class="pill green">3 landing outline</span>
+<span class="pill warn">Ưu tiên mobile</span>
+</div>
+</div>
+</div>
+<div class="phase">
+<div class="phase-num">2</div>
+<div class="phase-content">
+<h3>Tuần 3–6 · Pilot 3 trụ cột content</h3>
+<p>Đăng đều POV, tư vấn và case nhỏ. A/B test hook, caption, thumbnail. Mục tiêu không phải viral ngay, mà tìm format nào kéo bình luận hỏi giá, lưu bài, inbox, và giúp sale thấy lead hỏi cụ thể hơn.</p>
+<div class="phase-meta">
+<span class="pill green">3–5 video/tuần</span>
+<span class="pill info">Test Reels/TikTok/Shorts</span>
+<span class="pill warn">Đo comment &amp; inbox</span>
+</div>
+</div>
+</div>
+<div class="phase">
+<div class="phase-num">3</div>
+<div class="phase-content">
+<h3>Tuần 7–10 · Scale video tốt vào Ads</h3>
+<p>Chọn 5–8 video có tín hiệu tốt nhất để chạy paid. Chia campaign theo mục tiêu: traffic landing page, inbox tư vấn, retarget người xem video, và lead B2B. Giảm dần phụ thuộc vào ảnh tĩnh thuần catalogue.</p>
+<div class="phase-meta">
+<span class="pill green">Retarget video viewers</span>
+<span class="pill green">Boost top creatives</span>
+<span class="pill ok">Mục tiêu CPL giảm</span>
+</div>
+</div>
+</div>
+<div class="phase">
+<div class="phase-num">4</div>
+<div class="phase-content">
+<h3>Tuần 11–12 · Đóng gói sales kit &amp; B2B kit</h3>
+<p>Từ các asset đã chạy tốt, tạo bộ sales kit cho nhân viên tư vấn: video giải thích giá trị, checklist bàn giao, case nhà khách, ảnh before/after, link landing page theo nhu cầu. Đồng thời dựng một trang B2B riêng.</p>
+<div class="phase-meta">
+<span class="pill green">Sales kit</span>
+<span class="pill green">B2B portfolio</span>
+<span class="pill ok">Tăng chất lượng lead</span>
+</div>
+</div>
+</div>
+</div>
+<h3 style="font-family:'Playfair Display',serif;font-size:26px;margin:40px 0 16px;">KPI kỳ vọng theo tầng phễu</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Tầng phễu</th>
+<th>Chỉ số cần đo</th>
+<th>Kỳ vọng sau 12 tuần</th>
+<th>Vì sao hợp lý</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Awareness</strong></td>
+<td>Reach, video views, average watch time, profile visits.</td>
+<td>Tăng đều nhờ short-form video và nội dung hậu trường có tính thật.</td>
+<td>Video quy trình và nhà khách thật dễ giữ người xem hơn ảnh sản phẩm tĩnh.</td>
+</tr>
+<tr>
+<td><strong>Consideration</strong></td>
+<td>Saves, shares, comments hỏi tư vấn, click website/Zalo.</td>
+<td>Tăng chất lượng tương tác, đặc biệt với nội dung tư vấn và so sánh.</td>
+<td>Khách nội thất cần lưu lại để bàn với gia đình, đo phòng, cân ngân sách.</td>
+</tr>
+<tr>
+<td><strong>Lead Quality</strong></td>
+<td>Tỉ lệ lead có ngân sách rõ, nhu cầu rõ, diện tích/phòng rõ.</td>
+<td>Tăng 20–35% nếu content tư vấn được dùng đều trước CTA.</td>
+<td>Content đã giải thích trước, sale không bắt đầu từ con số 0.</td>
+</tr>
+<tr>
+<td><strong>Ads Efficiency</strong></td>
+<td>CTR, CPL, cost per qualified lead, retargeting conversion.</td>
+<td>CPL có thể giảm 20–40% sau khi có video creative thắng.</td>
+<td>Video tốt tạo engagement cao hơn, đồng thời retarget người đã xem có intent hơn cold audience.</td>
+</tr>
+<tr>
+<td><strong>B2B Pipeline</strong></td>
+<td>Số brief dự án, số cuộc hẹn, số báo giá, giá trị deal.</td>
+<td>5–10 lead doanh nghiệp/tháng sau khi có landing và case study rõ.</td>
+<td>Khách B2B cần bằng chứng năng lực trước khi gửi brief.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="big-insight">
+<small>Final close</small>
+<h3>Lam Sơn không cần nói mình tốt hơn. Lam Sơn cần cho khách thấy điều đó trước khi sale phải nói.</h3>
+<p>
+      Nếu hệ thống content làm đúng, mỗi video là một nhân viên tư vấn im lặng: giải thích chất liệu, chứng minh tay nghề, xử lý nghi ngờ, làm mới cảm nhận về mẫu mã và mở đường cho những đơn hàng lớn hơn. Đó là lý do chiến lược này không chỉ phục vụ marketing, mà phục vụ trực tiếp cho doanh thu.
+    </p>
+</div>
+<div class="mobile-note">
+    Bản HTML này đã tối ưu mobile: menu có thể kéo ngang, bảng có thể trượt ngang, layout tự chuyển từ nhiều cột sang một cột trên màn hình nhỏ.
+  </div>
+</section>
+</main>
+<footer class="footer">
+<div class="footer-inner">
+<div>
+<div class="footer-title">Nội Thất Lam Sơn · Final Pitch Strategy</div>
+<p>Marketing Intelligence · Content System · Mobile-ready HTML · 2026</p>
+</div>
+<div style="text-align:right;">
+<p>Bạch Đằng · Quận 12 · Gò Vấp · Buôn Ma Thuột</p>
+<p>Chiến lược: Gỗ thật · Xưởng thật · Nhà thật · Người thật</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
